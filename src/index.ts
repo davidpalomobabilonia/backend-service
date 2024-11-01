@@ -24,7 +24,7 @@ Appdatasource.initialize()
     app.listen(()=> {
         console.log(`servidor corriendo en http://localhost:${PORT}\n`);
         console.log(`Endpoints:`);
-        console.log(`API Products http://localhost: ${PORT}/api/products\n`);
+        console.log(`API Products http://localhost:${PORT}/api/products\n`);
         console.log(`Documentacion:`);
         console.log(`swagger en http://localhost:${PORT}/api-doc`);
     });
