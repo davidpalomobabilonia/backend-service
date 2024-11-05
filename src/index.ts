@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // rutas 
-app.use("/api/", router);// rutas de productos 
+app.use("/api/products", router);// rutas de productos 
 
 // documentacion swagger 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
@@ -26,7 +26,7 @@ Appdatasource.initialize()
         console.log(`Endpoints:`);
         console.log(`API Products http://localhost:${PORT}/api/products\n`);
         console.log(`Documentacion:`);
-        console.log(`swagger en http://localhost:${PORT}/api-doc`);
+        console.log(`swagger en http://localhost:${PORT}/api-docs`);
     });
 })
 .catch((error)=> console.log(error ));

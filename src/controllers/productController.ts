@@ -39,7 +39,7 @@ export const createProduct = async (req: Request, res: Response) => {
         const { name, description, price } = req.body; // sacando los datos del request
         const product = new Product();
         product.name = name,
-            product.description = description;
+        product.description = description;
         product.price = price;
         await productRepository.save(product);
         res.status(201).json(product);
