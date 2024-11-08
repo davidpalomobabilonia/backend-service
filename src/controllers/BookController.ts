@@ -10,7 +10,7 @@ export const getAllBook = async(red: Request, res: Response) => {
     const Book = await BooktRepository.find();
     res.json(Book);
   } catch(error) {
-    res.status(500).json({ message: "Error al obtener libros." });
+    res.status(500).json({ message: "Error al obtener libro." });
   }
 };
 

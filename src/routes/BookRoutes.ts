@@ -12,49 +12,49 @@ const bookRoutes = Router();
 /**
  * @swagger
  * tags:
- *   name: Products
- *   description: CRUD relacionado con productos
+ *   name: Book
+ *   description: CRUD relacionado con libro
  */
 
 /**
  * @swagger
- * /api/products:
+ * /api/Book:
  *   get:
- *     summary: Obtener todos los productos
- *     tags: [Products]
+ *     summary: Obtener todos los libros
+ *     tags: [Book]
  *     responses:
  *       200:
- *         description: Lista de productos
+ *         description: Lista de libros 
  */
 bookRoutes.get("/", getAllBook);
 
 /**
  * @swagger
- * /api/products/{id}:
+ * /api/Book/{id}:
  *   get:
- *     summary: Obtener un producto por ID
- *     tags: [Products]
+ *     summary: Obtener un libro por ID
+ *     tags: [Book]
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: integer
- *         description: ID del producto
+ *         description: ID del libro
  *     responses:
  *       200:
- *         description: Detalles del producto
+ *         description: Detalles del libro
  *       404:
- *         description: Producto no encontrado
+ *         description: libro no encontrado
  */
 bookRoutes.get("/:id", getBookyById);
 
 /**
  * @swagger
- * /api/products:
+ * /api/Book:
  *   post:
- *     summary: Crear un nuevo producto
- *     tags: [Products]
+ *     summary: Crear un nuevo libro
+ *     tags: [Book]
  *     requestBody:
  *       required: true
  *       content:
@@ -74,7 +74,7 @@ bookRoutes.get("/:id", getBookyById);
  *                 type: number
  *     responses:
  *       201:
- *         description: Producto creado
+ *         description: libro creado
  *       500:
  *         description: Error en el servidor
  */
@@ -82,17 +82,17 @@ bookRoutes.post("/", createBook);
 
 /**
  * @swagger
- * /api/products/{id}:
+ * /api/Book/{id}:
  *   put:
- *     summary: Actualizar un producto existente
- *     tags: [Products]
+ *     summary: Actualizar un libro existente
+ *     tags: [Book]
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: integer
- *         description: ID del producto
+ *         description: ID del libro
  *     requestBody:
  *       required: false
  *       content:
@@ -108,9 +108,9 @@ bookRoutes.post("/", createBook);
  *                 type: number
  *     responses:
  *       200:
- *         description: Producto actualizado
+ *         description: libro actualizado
  *       404:
- *         description: Producto no encontrado
+ *         description: libro no encontrado
  *       500:
  *         description: Error en el servidor
  */
@@ -118,22 +118,22 @@ bookRoutes.put("/:id", updateBook);
 
 /**
  * @swagger
- * /api/products/{id}:
+ * /api/Book/{id}:
  *   delete:
- *     summary: Eliminar un producto
- *     tags: [Products]
+ *     summary: Eliminar un libro
+ *     tags: [Book]
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: integer
- *         description: ID del producto
+ *         description: ID del libro
  *     responses:
  *       200:
- *         description: Producto eliminado
+ *         description: libro eliminado
  *       404:
- *         description: Producto no encontrado
+ *         description: libro  no encontrado
  *       500:
  *         description: Error en el servidor
  */
